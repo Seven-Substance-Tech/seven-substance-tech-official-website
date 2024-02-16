@@ -16,7 +16,6 @@ function updateNavigationStyle() {
     if (path.endsWith("/")) {
         path = path.substring(0, path.length - 1)
     }
-    console.log(path)
     if (path == "") {
         $(".navigation>ul>:first-child>a").trigger("click")
     } else {

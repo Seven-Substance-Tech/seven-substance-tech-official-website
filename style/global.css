@@ -1,0 +1,12 @@
+:root{
+    --theme-color: #5e7594;
+}
+body {
+    margin: unset;
+    font-family: "Hellofont ID KeSong", "STFangsong", "FangSong";
+    font-size: 1.2em;
+    font-weight: bold;
+}
+a {
+    -webkit-tap-highlight-color: transparent;
+}

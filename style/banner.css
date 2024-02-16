@@ -1,0 +1,23 @@
+.banner>ul {
+    margin: unset;
+    padding: unset;
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+}
+.banner>ul>li {
+    width: 0px;
+    flex-grow: 1;
+    padding: unset;
+    position: relative;
+    font-size: 0px;
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+.banner.dragging>ul>li {
+    transition: none;
+}
+.banner>ul>li img {
+    -webkit-user-drag: none;
+    width: 100%;
+}

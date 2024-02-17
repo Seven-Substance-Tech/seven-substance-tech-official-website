@@ -1,5 +1,8 @@
-$(document).on("pjax:complete", function() {
+$(document).on("pjax:success", function() {
     updateNavigationStyle()
+})
+$(document).on("pjax:fail", function() {
+    $(".navigation>ul>li.loading").removeClass("loading")
 })
 
 $(function() {
@@ -17,7 +20,7 @@ function updateNavigationStyle() {
         path = path.substring(0, path.length - 1)
     }
     if (path == "") {
-        $(".navigation>ul>:first-child>a").trigger("click")
+        replacePage($(".navigation>ul>:first-child>a").attr("href"))
     } else {
         $(`.navigation>ul>li>a[href="${path}"]`).parent().addClass("active")
     }

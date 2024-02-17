@@ -7,6 +7,10 @@ body {
     font-size: 1.2em;
     font-weight: bold;
 }
-a {
+* {
     -webkit-tap-highlight-color: transparent;
+}
+.button {
+    cursor: pointer;
+    user-select: none;
 }

@@ -78,15 +78,17 @@ function loadPage(path, selector, successCallback, errorCallback, failCallback) 
                                 checkComplete()
                             },
                             error: function(XHR, status, message) {
-                                if (errorCallback) {
-                                    errorCallback({
-                                        url: element.attr("href"),
-                                        method: "GET",
-                                        status: XHR.status,
-                                        message: message
-                                    })
+                                if (message != "abort") {
+                                    if (errorCallback) {
+                                        errorCallback({
+                                            url: element.attr("href"),
+                                            method: "GET",
+                                            status: XHR.status,
+                                            message: message
+                                        })
+                                    }
+                                    checkComplete()
                                 }
-                                checkComplete()
                             }
                         }))
                     }
@@ -102,15 +104,17 @@ function loadPage(path, selector, successCallback, errorCallback, failCallback) 
                                 checkComplete()
                             },
                             error: function(XHR, status, message) {
-                                if (errorCallback) {
-                                    errorCallback({
-                                        url: element.attr("src"),
-                                        method: "GET",
-                                        status: XHR.status,
-                                        message: message
-                                    })
+                                if (message != "abort") {
+                                    if (errorCallback) {
+                                        errorCallback({
+                                            url: element.attr("src"),
+                                            method: "GET",
+                                            status: XHR.status,
+                                            message: message
+                                        })
+                                    }
+                                    checkComplete()
                                 }
-                                checkComplete()
                             }
                         }))
                     }
@@ -121,17 +125,19 @@ function loadPage(path, selector, successCallback, errorCallback, failCallback) 
             }
         },
         error: function(XHR, status, message) {
-            var data = {
-                url: path,
-                method: "GET",
-                status: XHR.status,
-                message: message
-            }
-            if (errorCallback) {
-                errorCallback(data)
-            }
-            if (failCallback) {
-                failCallback(data)
+            if (message != "abort") {
+                var data = {
+                    url: path,
+                    method: "GET",
+                    status: XHR.status,
+                    message: message
+                }
+                if (errorCallback) {
+                    errorCallback(data)
+                }
+                if (failCallback) {
+                    failCallback(data)
+                }
             }
         }
     })]

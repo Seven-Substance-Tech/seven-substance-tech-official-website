@@ -1,0 +1,27 @@
+.group {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #505050;
+}
+.group a {
+    color: #505050;
+    text-decoration: none;
+}
+.padding-top {
+    flex-grow: 1;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.padding-bottom {
+    flex-grow: 2;
+}
+@media only screen and (min-width: 600px) {
+    .content {
+        flex-grow: 2;
+        max-height: 400px;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,25 @@
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.information {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 2em;
+}
+@media only screen and (min-width: 600px) {
+    .left {
+        width: calc(60% - 1px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid var(--theme-color);
+    }
+}

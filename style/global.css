@@ -1,11 +1,19 @@
 :root{
-    --theme-color: #5e7594;
+    --theme-color: #5E7594;
+}
+html, body {
+    height: 100%;
 }
 body {
     margin: unset;
+    display: flex;
+    flex-direction: column;
     font-family: "Hellofont ID KeSong", "STFangsong", "FangSong";
     font-size: 1.2em;
     font-weight: bold;
+}
+.page {
+    flex-grow: 1;
 }
 * {
     -webkit-tap-highlight-color: transparent;

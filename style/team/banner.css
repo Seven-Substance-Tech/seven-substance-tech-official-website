@@ -3,12 +3,15 @@
     display: flex;
     justify-content: space-evenly;
     align-items: stretch;
-    color: white;
 }
 .banner {
     width: 100%;
 }
+.banner>ul>li {
+    background-color: #c4ccde;
+}
 .banner>ul>li>* {
+    min-height: 50vw;
     font-size: 4rem;
 }
 .banner-prev-group, .banner-next-group {

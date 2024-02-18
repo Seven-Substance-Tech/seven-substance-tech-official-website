@@ -14,12 +14,11 @@
     padding: 0px;
     font-size: 2em;
 }
-@media only screen and (min-width: 600px) {
-    .left {
-        width: calc(60% - 1px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-right: 1px solid var(--theme-color);
+.information>li {
+    margin: 8px;
+}
+@media only screen and (min-width: 800px) {
+    .information>li {
+        margin: unset;
     }
 }

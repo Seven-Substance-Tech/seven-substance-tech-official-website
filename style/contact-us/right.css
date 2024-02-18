@@ -1,10 +1,18 @@
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.right>* {
+    margin: 16px;
+}
 .right>h2 {
-    margin: 0px;
     color: black;
     font-size: 1.8em;
 }
 .right>p {
-    margin: 0px;
+    max-width: 11em;
     font-size: 1.2em;
 }
 .sign-up {
@@ -16,13 +24,8 @@
     font-size: 1.8em;
     font-weight: normal;
 }
-@media only screen and (min-width: 600px) {
-    .right {
-        width: calc(40% - 1px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        border-left: 1px solid var(--theme-color);
+@media only screen and (min-width: 800px) {
+    .right>* {
+        margin: unset;
     }
 }

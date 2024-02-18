@@ -1,4 +1,5 @@
 .group {
+    padding-inline: 5%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -8,20 +9,33 @@
     color: #505050;
     text-decoration: none;
 }
-.padding-top {
-    flex-grow: 1;
-}
 .content {
     display: flex;
     flex-direction: column;
 }
-.padding-bottom {
-    flex-grow: 2;
+.divide-line {
+    height: 2px;
+    margin-block: 16px;
+    background-color: var(--theme-color);
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
+    .vertical-padding-top {
+        flex-grow: 1;
+    }
     .content {
         flex-grow: 2;
         max-height: 400px;
         flex-direction: row;
+    }
+    .horizontal-padding {
+        flex-grow: 1;
+    }
+    .divide-line {
+        width: 2px;
+        height: unset;
+        margin-block: unset;
+    }
+    .vertical-padding-bottom {
+        flex-grow: 2;
     }
 }
